@@ -5,6 +5,7 @@ import 'package:printing/printing.dart';
 import '../blocs/product/product_bloc.dart';
 import '../models/product.dart';
 
+
 class ReceiptScreen extends StatelessWidget {
   const ReceiptScreen({Key? key}) : super(key: key);
 
