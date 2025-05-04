@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:printing/printing.dart';
+import 'package:pdf/widgets.dart' as pw;
 import '../blocs/product/product_bloc.dart';
 import '../models/product.dart';
-
 
 class ReceiptScreen extends StatelessWidget {
   const ReceiptScreen({Key? key}) : super(key: key);
