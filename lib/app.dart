@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'blocs/authentication/authentication_bloc.dart';
-import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/main_tab_navigation_screen.dart';
 
 class ShopkeeperApp extends StatelessWidget {
   const ShopkeeperApp({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class ShopkeeperApp extends StatelessWidget {
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
           if (state is AuthenticationAuthenticated) {
-            return const HomeScreen();
+            return const MainTabNavigationScreen();
           }
           if (state is AuthenticationUnauthenticated) {
             return const LoginScreen();
