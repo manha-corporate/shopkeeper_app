@@ -43,7 +43,9 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _navigateToSignUp() {
-    // TODO: Implement navigation to sign up screen
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const SignUpScreen()),
+    );
   }
 
   @override
