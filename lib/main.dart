@@ -14,7 +14,11 @@ void main() async {
     RepositoryProvider.value(
       value: authenticationRepository,
       child: BlocProvider(
-        create: (_) => AuthenticationBloc(authenticationRepository: authenticationRepository),
+        create: (context) {
+          final bloc = AuthenticationBloc(authenticationRepository: authenticationRepository);
+          bloc.add(AuthenticationStarted());
+          return bloc;
+        },
         child: const ShopkeeperApp(),
       ),
     ),
